@@ -55,6 +55,7 @@ def login():
 
         if user is None:
             error = 'Incorrect username.'
+
         elif not check_password_hash(user['password'], password):
             error = 'Incorrect password.'
 
@@ -88,8 +89,8 @@ def logout():
     return redirect(url_for('index'))
 
 
- # may be unwated as this isnt a blog??
-    # requires authentication for other views
+# may be unwated as this isnt a blog??
+# requires authentication for other views
 def login_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
@@ -99,7 +100,3 @@ def login_required(view):
         return view(**kwargs)
 
     return wrapped_view
-
-
-
-

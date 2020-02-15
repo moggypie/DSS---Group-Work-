@@ -6,7 +6,7 @@ from werkzeug.exceptions import abort
 from Dss11.auth import login_required
 from Dss11.db import get_db
 
-bp = Blueprint('Forum', __name__)
+bp = Blueprint('forum', __name__)
 
 @bp.route('/')
 def index():
