@@ -1,0 +1,26 @@
+
+To start app...
+
+
+
+For Windows cmd, use set instead of export:
+
+in terminal...
+> set FLASK_APP=Dss11
+> set FLASK_ENV=development
+> flask run
+
+
+[For Windows PowerShell, use $env: instead of export:
+> $env:FLASK_APP = "flaskr"
+> $env:FLASK_ENV = "development"
+> flask run]
+
+
+to start db..
+in terminal...
+> set FLASK_APP=Dss11
+> set FLASK_ENV=development
+> flask init-db
+
+
