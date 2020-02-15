@@ -88,7 +88,8 @@ def logout():
     return redirect(url_for('index'))
 
 
-# requires authentication for other views
+ # may be unwated as this isnt a blog??
+    # requires authentication for other views
 def login_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
@@ -98,5 +99,7 @@ def login_required(view):
         return view(**kwargs)
 
     return wrapped_view
+
+
 
 
